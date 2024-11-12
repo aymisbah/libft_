@@ -6,7 +6,7 @@
 /*   By: aymisbah <aymisbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:36:45 by aymisbah          #+#    #+#             */
-/*   Updated: 2024/11/11 15:33:56 by aymisbah         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:54:02 by aymisbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_atoi(const char *str)
 {
-	unsigned long	res;
+	size_t 	res;
 	int				i;
 	int				sign;
+	size_t check;
 
 	sign = 1;
 	res = 0;
@@ -31,8 +32,12 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] <= '9' && str[i] >= '0')
 	{
+		check = res;
 		res = res * 10 + (str[i] - '0');
 		i++;
+		if (check > res)
+			return (-(sign > 0));
 	}
-	return (res * sign);
+	return ((int)res * sign);
 }
+
