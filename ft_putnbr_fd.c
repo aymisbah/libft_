@@ -6,7 +6,7 @@
 /*   By: aymisbah <aymisbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 18:07:58 by aymisbah          #+#    #+#             */
-/*   Updated: 2024/11/11 22:44:22 by aymisbah         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:23:23 by aymisbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putnbr_fd(int n, int fd)
 	long	nb;
 
 	nb = n;
+	if (fd < 0)
+		return ;
 	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
@@ -28,5 +30,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb % 10, fd);
 	}
 	else
-		ft_putchar_fd(n + '0', fd);
+		ft_putchar_fd(nb + '0', fd);
 }

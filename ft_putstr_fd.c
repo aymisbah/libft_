@@ -6,7 +6,7 @@
 /*   By: aymisbah <aymisbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:29:42 by aymisbah          #+#    #+#             */
-/*   Updated: 2024/11/11 22:44:27 by aymisbah         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:22:26 by aymisbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (fd < 0 || !s)
+		return ;
 	while (s[i])
 		write(fd, &s[i++], 1);
 }

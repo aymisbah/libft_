@@ -6,7 +6,7 @@
 /*   By: aymisbah <aymisbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:14:38 by aymisbah          #+#    #+#             */
-/*   Updated: 2024/11/11 13:36:33 by aymisbah         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:05:13 by aymisbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 
 	new_list = NULL;
+	if (!lst)
+		return (NULL);
 	while (lst)
 	{
 		if (f)

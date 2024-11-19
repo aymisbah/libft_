@@ -6,15 +6,13 @@
 /*   By: aymisbah <aymisbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:44:11 by aymisbah          #+#    #+#             */
-/*   Updated: 2024/11/05 17:57:59 by aymisbah         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:22:28 by aymisbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 

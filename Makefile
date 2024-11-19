@@ -17,7 +17,7 @@ OBJB = $(SRCB:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror 
 AR = ar cr
-FRM = rm -rf
+RM = rm -rf
 NAME = libft.a
 HEADER = libft.h
 
@@ -33,12 +33,12 @@ bonus: $(OBJB)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(FRM) $(OBJ) $(OBJB)
+	$(RM) $(OBJ) $(OBJB)
 
 fclean: clean
-	$(FRM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: clean
 
